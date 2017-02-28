@@ -1,7 +1,7 @@
 // A recursive definition of fibonacci
 // Author: Sean Foo
 
-class fibonacci {
+class Fibonacci {
 	
 	private static int fib(int i) {
 		if (i == 1) {
