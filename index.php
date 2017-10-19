@@ -8,7 +8,7 @@
 <body>
 <p>Welcome to test-app-584</p>
 <?php
-  echo "<p>Hi, I'm a PHP script!</p>";
+  echo "<p>Hi, I'm a PHP script!</p>\n";
 ?>
 </body>
 
