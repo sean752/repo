@@ -29,16 +29,11 @@
 
   function checkLoginState() {
     FB.getLoginStatus(function(response) {
-       alert(response.status);
-    });
-  }
-
-  function checkLoginState() {
-    FB.getLoginStatus(function(response) {
+      // alert(response.status);
       if (response.status === 'connected') {
         window.location.replace('profile.html');
       } else {
-        alert('Login unsuccessful');
+        // alert('Login unsuccessful');
       }
     });
   }
