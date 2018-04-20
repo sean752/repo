@@ -27,7 +27,7 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
-   function checkLoginState() {
+  function checkLoginState() {
     FB.getLoginStatus(function(response) {
        alert(response.status);
     });
@@ -35,13 +35,17 @@
 
   function checkLoginState() {
     FB.getLoginStatus(function(response) {
-      alert(response.status);
+      if (response.status === 'connected') {
+        window.location.replace('profile.html');
+      } else {
+        alert('Login unsuccessful');
+      }
     });
   }
   </script>
 
   <!-- <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div> -->
-  <fb:login-button onlogin="checkLoginState();">
+  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
   </fb:login-button>
 
   <!-- <div
